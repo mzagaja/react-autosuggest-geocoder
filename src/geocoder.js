@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 import Autosuggest from 'react-autosuggest';
 
 export class ReactAutosuggestGeocoder extends React.Component {
-  static propTypes = {
+  propTypes = {
     url: PropTypes.string.isRequired,
     sources: PropTypes.string.isRequired,
     apiKey: PropTypes.string.isRequired,
@@ -24,7 +24,7 @@ export class ReactAutosuggestGeocoder extends React.Component {
     renderSuggestion: PropTypes.func.isRequired
   };
 
-  static defaultProps = {
+  defaultProps = {
     url: 'https://api.geocode.earth/v1',
     sources: 'openaddresses',
     apiKey: null,
